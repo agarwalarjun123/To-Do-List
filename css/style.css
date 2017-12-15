@@ -1,0 +1,19 @@
+.s1{
+  margin:auto;
+  width:300px;
+  height:600px;
+ 
+  
+  
+  background-color:hotpink;
+  }
+body{
+  background-color:lightblue;
+}
+div{
+  font-size:20px;
+}
+input[type=text]{
+  margin:50px 30px;
+  
+}
