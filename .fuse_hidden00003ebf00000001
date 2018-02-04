@@ -1,0 +1,24 @@
+{
+  "name": "node-todo",
+  "version": "1.0.0",
+  "description": "todo list node app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "script": "node index"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/agarwalarjun123/To-Do-List.git"
+  },
+  "author": "arjun agarwal",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/agarwalarjun123/To-Do-List/issues"
+  },
+  "homepage": "https://github.com/agarwalarjun123/To-Do-List#readme",
+  "dependencies": {
+    "express": "^4.16.2",
+    "mongoose": "^5.0.3"
+  }
+}
