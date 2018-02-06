@@ -23,6 +23,6 @@ app.use('/get',get);
 app.use('/add',add);
 app.use('/delete',del);
 const server=http.createServer(app);
-server.listen(0.0.0.0,process.env.PORT,function(){
+server.listen(3000,'localhost',function(){
 console.log("server running at port:3000");
 });
