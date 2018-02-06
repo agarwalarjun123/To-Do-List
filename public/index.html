@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en" >
 <head>
@@ -7,22 +8,43 @@
   
   <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css'>
   	 
-      <link rel="stylesheet" href="css/style.css">
+ <link rel="stylesheet" href="css/style.css">
 
   
 </head>
+<script src="js/index.js"></script>
 
-<body>
-  <center><h1>Your To-Do List</h1></center>
-<div class="s1" id="schedule">
-  <span style="margin-left:30px;"> <B>SCHEDULE YOUR TASKS:</B></span> <input type="text" id="add">
-  <center><button onclick="add()">Add item</button></center>
-<hr>
-  
+<div class=" container">
+<div class="row"><div class="col-md-3"></div>
+<div class="col-md-6" >
+<center><h1>Your Own To-Do List</h1></center>
+<div class="form-group text-center">
+<input type="text" id="t1" class="form-control">
 </div>
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+<div class="text-left" id='s1'><ul>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+$.ajax({
+url:"http://localhost:3000/get",
+datatype:"application/json",
+success:function(data){
+	
+for(var i=0;i<data.length;i++){
+document.getElementById("s1").innerHTML+="<li>"+data[i].note+"</li>";
+		}
 
-    <script  src="js/index.js"></script>
+$("li").click(function(){
+delete1($(this).html());
+		});
+						}
+		});
+</script>
+</ul>
+</div>
+<center><button id="b1" onclick="add()">Add to To-do List</button></center>
 
-</body>
+</div><div class="col-md-3"></div>
+</div>
+</div>
+
 </html>
