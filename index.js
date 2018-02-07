@@ -10,7 +10,7 @@ var mongoPassword="12345678";
 var config=JSON.parse(process.env.APP_CONFIG);
 app.set('etag', false);
 app.use(morgan('dev'));
-const url= "mongodb://" + config.mongo.user + ":" + encodeURIComponent(mongoPassword) + "@" + config.mongo.hostString;
+const url= "mongodb://" + config.mongo.user + ":" + encodeURIComponent(mongoPassword) + "@" + config.mongo.hostString+"/conFusion";
     mongoose.connect(url,function(err,db){
 if(err)
 	console.log(err);
