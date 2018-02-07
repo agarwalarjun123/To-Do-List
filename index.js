@@ -7,7 +7,7 @@ const add=require('./routes/add');
 const del=require('./routes/del');
 const app=express();
 var mongoPassword="12345678";
-var config=JSON.parse(process.env.APP_CONFIG);
+var config=process.env.APP_CONFIG;
 app.set('etag', false);
 app.use(morgan('dev'));
 const url= "mongodb://" + config.mongo.user + ":" + encodeURIComponent(mongoPassword) + "@" + config.mongo.hostString+"/conFusion";
