@@ -4,7 +4,7 @@ function delete1(x){
 	var a=JSON.stringify({"note":x});
 console.log(a);
 $.ajax({
-url:"http://localhost:3000/delete",
+url:"http://to-dolist.eu-4.evennode.com/delete",
 type:"POST",
 dataType:"json",
 contentType:"application/json",
@@ -12,7 +12,7 @@ data:a,
 success:function(data){
 	console.log(data);
 	$.ajax({
-url:"http://localhost:3000/get",
+url:"http://to-dolist.eu-4.evennode.com/get",
 success:function(data){
 	console.log("sss");
 	document.getElementById("s1").innerHTML="";
@@ -41,7 +41,7 @@ function add(){
 var z=document.getElementById("t1").value;
 var jst={"note":z};
 $.ajax({
-url:"http://localhost:3000/add",
+url:"http://to-dolist.eu-4.evennode.com/add",
 type:"POST",
 dataType:"json",
 contentType:"application/json",
@@ -51,7 +51,7 @@ data:JSON.stringify(jst),
 success:function(data){
 	console.log(data);
 $.ajax({
-url:"http://localhost:3000/get",
+url:"http://to-dolist.eu-4.evennode.com/get",
 success:function(data){
 	console.log("sss");
 	document.getElementById("s1").innerHTML="";
