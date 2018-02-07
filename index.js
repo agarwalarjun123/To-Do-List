@@ -8,7 +8,7 @@ const del=require('./routes/del');
 const app=express();
 app.set('etag', false);
 app.use(morgan('dev'));
-const url="mongodb://6a.mongo.evennode.com:27017,6b.mongo.evennode.com:27017/a2301f7599130336615033f7ce624d5e?replicaSet=eu-6 -u a2301f7599130336615033f7ce624d5e -p Arjun@1234";
+const url="mongodb://6a.mongo.evennode.com:27017,6b.mongo.evennode.com:27017/a2301f7599130336615033f7ce624d5e?replicaSet=eu-6 -u a2301f7599130336615033f7ce624d5e -p 12345678";
 mongoose.connect(url,function(err,db){
 if(err)
 	console.log(err);
