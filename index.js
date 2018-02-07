@@ -20,10 +20,10 @@ console.log("connected to mongo server");
 });
 
 app.use(express.static(__dirname+"/public"));
-app.use('/get',get);
+app.use('http://to-dolist.eu-4.evennode.com/get',get);
 
-app.use('/add',add);
-app.use('/delete',del);
+app.use('http://to-dolist.eu-4.evennode.com/add',add);
+app.use('http://to-dolist.eu-4.evennode.com/delete',del);
 const server=http.createServer(app);
 server.listen(process.env.PORT,'0.0.0.0',function(){
 console.log("server running at port:3000");
